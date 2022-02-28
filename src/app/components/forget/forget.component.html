@@ -1,0 +1,50 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <div>
+            <h1 class="header">
+                <span style='color:blue;'>F</span>
+                <span style='color:red;'>u</span>
+                <span style='color:green'>n</span>
+                <span style='color:blue;'>d</span>
+                <span style='color:yellow;'>o</span>
+                <span style='color:red;'>o</span>
+            </h1>
+            <p class="h1">Password Recovery</p>
+        </div>
+        <div class="h2">
+            <p>To keep your account safe, Fundoo wants to make sure its really you trying to sign in</p>
+        </div>
+
+        <form [formGroup]="forgetForm" (onSubmit)="onSubmit()">
+
+            <form1 fxFlex="100" fxLayoutAlign="end" fxLayout="column">
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName='Email' placeholder="Email">
+                    <mat-error>
+                        Enter a valid email
+                    </mat-error>
+
+                </mat-form-field>
+
+
+                <div fxFlex="100" fxLayout="row" fxLayoutAlign="end">
+                    <button routerLink='/reset' mat-raised-button color="primary">Submit</button>
+                </div>
+
+                
+                            <mat-card-actions align="end">
+                                <mat-card-actions align="end">
+                                </mat-card-actions>
+                            </mat-card-actions>
+                      
+
+
+            </form1>
+        </form>
+
+
+    </mat-card>
+</div>

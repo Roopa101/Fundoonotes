@@ -1,0 +1,56 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <div>
+            <h1 class="header">
+                <span style='color:blue;'>F</span>
+                <span style='color:red;'>u</span>
+                <span style='color:green'>n</span>
+                <span style='color:blue;'>d</span>
+                <span style='color:yellow;'>o</span>
+                <span style='color:red;'>o</span>
+            </h1>
+            <p class="h1">Reset Password</p>
+        </div>
+       
+        
+        <form [formGroup]="resetForm" (onSubmit)="onSubmit()">
+ 
+        <form1 fxFlex="100" fxLayoutAlign="end" fxLayout="column">
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>New Password</mat-label>
+                <input matInput formControlName='Password' placeholder="New Password">
+                <mat-error>
+                    Enter a new password
+                </mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label> Confirm New Password</mat-label>
+                <input matInput formControlName='Password' placeholder="Confirm New Password">
+                <mat-error>
+                    Enter a new Confirm password
+                </mat-error>
+
+            </mat-form-field>
+            <div>
+                <mat-checkbox class="checkbox1">Show Password</mat-checkbox>
+              </div>
+            <div fxFlex="100" fxLayout="row" fxLayoutAlign="end">
+
+                <button mat-raised-button color="primary" >Reset</button>
+            </div>
+                    
+                                    <mat-card-actions align="end">
+                                        <mat-card-actions align="end">
+                                    </mat-card-actions>
+                                </mat-card-actions>
+                            
+        </form1>
+        </form>
+
+
+    </mat-card>
+</div>

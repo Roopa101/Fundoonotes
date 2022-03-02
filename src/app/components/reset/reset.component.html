@@ -20,7 +20,9 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>New Password</mat-label>
-                <input matInput formControlName='Password' placeholder="New Password">
+                <!-- <input matInput formControlName='NewPassword' placeholder="New Password"> -->
+                <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="NewPassword">
+
                 <mat-error>
                     Enter new password
                 </mat-error>
@@ -29,18 +31,20 @@
 
             <mat-form-field appearance="outline">
                 <mat-label> Confirm New Password</mat-label>
-                <input matInput formControlName='Password' placeholder="Confirm New Password">
+                <!-- <input matInput formControlName='NewPassword' placeholder="Confirm New Password"> -->
+                <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="ConfirmPassword">
+
                 <mat-error>
                     Enter a new Confirm password
                 </mat-error>
 
             </mat-form-field>
-            <div>
-                <mat-checkbox class="checkbox1">Show Password</mat-checkbox>
-              </div>
+            <div >
+                <mat-checkbox matSuffix (click)="checkboxPassword()">Show Password</mat-checkbox>
+            </div>
             <div fxFlex="100" fxLayout="row" fxLayoutAlign="end">
 
-                <button mat-raised-button color="primary" >Reset</button>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Reset</button>
             </div>
                     
                                     

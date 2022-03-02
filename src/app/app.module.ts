@@ -19,6 +19,12 @@ import { FormsModule } from '@angular/forms';
 import { ForgetComponent } from './components/forget/forget.component';
 import { ResetComponent } from './components/reset/reset.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+
+
 
 
 @NgModule({
@@ -28,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     SignupComponent,
     ForgetComponent,
     ResetComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

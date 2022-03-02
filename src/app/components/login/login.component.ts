@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
+  public showPassword: boolean = false;
+
 
   constructor(private formBuilder: FormBuilder,private userService:UserService) { }
 
@@ -43,5 +45,8 @@ export class LoginComponent implements OnInit {
       console.log("form is not valid fill form correctly");
       return;
     }
+}
+public checkboxPassword(): void {
+  this.showPassword = !this.showPassword;
 }
 }

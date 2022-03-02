@@ -1,7 +1,7 @@
 <div class="container"> 
  
   <div class="register">
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"></form>
+    <form [formGroup]="registerForm" (ngSubmit)="signup()"></form>
       <div class="image">
           <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg"  >
           
@@ -18,7 +18,7 @@
       </h1>
       <p class="SubHeader">Create your Account</p>
     </div>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="registerForm" (ngSubmit)="signup()">
     <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
      
      

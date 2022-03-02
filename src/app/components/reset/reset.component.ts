@@ -28,4 +28,3 @@ export class ResetComponent implements OnInit {
       console.log("form is not valid fill form correctly")
     }
 }
-

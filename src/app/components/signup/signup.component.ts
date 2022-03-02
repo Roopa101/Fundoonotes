@@ -11,7 +11,7 @@ export class SignupComponent implements OnInit {
 
   registerForm!: FormGroup;
   submitted = false;
- // public showPassword: boolean = false;
+  public showPassword: boolean = false;
 
 
   constructor(private formBuilder: FormBuilder,private userService: UserService) {
@@ -51,6 +51,9 @@ export class SignupComponent implements OnInit {
       console.log("form is not valid fill form correctly")
       return;
     }
+  }
+  public checkboxPassword(): void {
+    this.showPassword = !this.showPassword;
   }
    
 }

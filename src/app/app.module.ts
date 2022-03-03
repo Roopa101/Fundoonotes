@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -22,8 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -34,7 +35,8 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
     SignupComponent,
     ForgetComponent,
     ResetComponent,
-    DashboardComponent,
+    DashboardComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
     MatCardModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule
+    HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule,MatDividerModule,MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -30,7 +30,7 @@ import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.c
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { IconsComponent } from './components/icons/icons.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { AuthguardServiceService } from './authguard-service.service';
 
 
 
@@ -63,7 +63,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FormsModule,
     HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule,MatDividerModule,MatMenuModule,MatExpansionModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

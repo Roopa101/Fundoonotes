@@ -21,7 +21,7 @@ export class NoteService {
         }
       )
     }
-   console.log("take notes called")
+   console.log("take note called")
    return this.httpService.postService('/notes/addNotes',data,true,headersObject)
   }
 }

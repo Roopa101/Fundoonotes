@@ -27,13 +27,15 @@
         </div>   
 </div> -->
 
-<div class="card" fxLayoutAlign="center center">
-    <mat-card fxLayout="column" fxFlex="100">
+<!-- <div class="card"    fxLayoutAlign="center center">
+    <div *ngIf="!isExpand" (click)="main()"></div>
+    
+    <mat-card class="main" fxLayout="column" fxFlex="100">
         <div>
             <input class="title" matInput type="text" placeholder="Title"  [(ngModel)]="title" > 
         </div>
         <div>
-            <input class="Takenote" matInput type="text" placeholder="Take a note.." [(ngModel)]="description" >
+            <input class="Takenote" matInput type="text" placeholder="Take a note..." [(ngModel)]="description" >
         </div>
         <div fxLayout="row" >
 
@@ -44,7 +46,32 @@
         </div>
 
     </mat-card>
-</div>
+</div> -->
 
 
 
+<div class="container" fxLayoutAlign="center center" >
+     <div *ngIf="!isWrite" (click)="method()">
+     <mat-card class="main" fxlayout="column">
+    
+    
+     <input class="content" matInput type="text" placeholder="Take a note..">
+     </mat-card>
+     </div>
+     <div *ngIf="isWrite" >
+     <mat-card fxLayout="column" fxFlex="125">
+     <div>
+    <input class="title" matInput type="text" placeholder="Title" [(ngModel)]="title">
+    </div>
+     <div>
+     <textarea
+      class="head1" placeholder="Take a note..." [(ngModel)]="description">
+    </textarea>
+ </div>
+     <div fxLayout="row">
+     <app-icons ></app-icons>
+    <button class="close" mat-flat-button (click)="isWrite=!isWrite" (click)="add()">Close</button>
+ </div>
+</mat-card>
+    </div>
+    </div>

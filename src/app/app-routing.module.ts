@@ -5,6 +5,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ForgetComponent } from './components/forget/forget.component';
 import { ResetComponent } from './components/reset/reset.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TakeNotesComponent } from './components/take-notes/take-notes.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 
 
@@ -16,7 +18,8 @@ const routes: Routes = [
   {path:'forget' , component:ForgetComponent},
   {path:'resetpassword/:token' , component:ResetComponent },
   { path: 'dashboard' , component:DashboardComponent},
-  
+  { path :'take-notes', component:TakeNotesComponent},
+  { path :'icons', component:IconsComponent}
   
 ];
 

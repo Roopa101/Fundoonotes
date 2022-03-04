@@ -115,8 +115,14 @@
           
         
         <mat-sidenav-content style="overflow:hidden;">
-          <router-outlet></router-outlet>
-          <p *ngFor="let content of fillerContent"></p>
+          <!-- <router-outlet></router-outlet> -->
+          <div fxLayout="column" fxLayoutAlign="space-between center" >
+            <div>
+              <app-take-notes></app-take-notes>
+            </div>
+
+          </div>
+          <!-- <p *ngFor="let content of fillerContent"></p> -->
           
         </mat-sidenav-content>
       </mat-sidenav-container>

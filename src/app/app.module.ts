@@ -25,6 +25,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
+import { TakeNotesComponent } from './components/take-notes/take-notes.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
+import { IconsComponent } from './components/icons/icons.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -35,7 +41,11 @@ import {MatMenuModule} from '@angular/material/menu';
     SignupComponent,
     ForgetComponent,
     ResetComponent,
-    DashboardComponent
+    DashboardComponent,
+    TakeNotesComponent,
+    GetAllNotesComponent,
+    DisplaynotesComponent,
+    IconsComponent
   
   ],
   imports: [
@@ -51,7 +61,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatCardModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule,MatDividerModule,MatMenuModule
+    HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule,MatDividerModule,MatMenuModule,MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

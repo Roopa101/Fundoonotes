@@ -1,0 +1,28 @@
+<div fxLayout="row" fxLayoutAlign="center none">
+    <div fxLayout="column" fxLayoutAlign=" stretch" style="margin-top: 100px;">
+        <mat-accordion class="card">
+            <mat-expansion-panel hideToggle class="note2">
+              <mat-expansion-panel-header class="note">
+                  <div>
+                    <input type="notes" class="text2" placeholder="Title">   
+                  </div>
+                            
+              </mat-expansion-panel-header>
+            <textarea matInput class="text1"  placeholder="Take a note..."
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="40"></textarea> 
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <app-icons></app-icons>
+            </div>
+            <div>
+                <a class="link"mat-button>Close</a> 
+            </div>
+            
+        </div>
+            </mat-expansion-panel>
+          </mat-accordion>      
+        </div>   
+</div>

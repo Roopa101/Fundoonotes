@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoteService } from 'src/app/services/NoteService/note.service';
 
 @Component({
   selector: 'app-take-notes',
@@ -6,14 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./take-notes.component.scss']
 })
 export class TakeNotesComponent implements OnInit {
-  tite:any;
-  discription:any;
-  submitted=false;
-  constructor() { }
+  title: any;
+  description: any;
+  submitted = false;
+
+  constructor(private noteService: NoteService) { }
 
   ngOnInit(): void {
   }
- add(){
-   console.log(this.tite,this.discription)
- }
-}
+
+    add() {
+      let reqData = {
+        title: this.title,
+        description: this.description
+      }
+
+      console.log(reqData)
+      if (this.title && this.description) {
+        this.noteService.takenotes(reqData).subscribe((Response: any) => {
+          console.log(Response);
+          localStorage.setItem("token", Response.id)
+        }, error => { console.log(error); })
+      }
+      else {
+        console.log("Form is not valid. Please Fill the form correctly");
+      }
+    }
+  }
+ 

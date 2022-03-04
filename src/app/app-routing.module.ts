@@ -9,8 +9,6 @@ import { TakeNotesComponent } from './components/take-notes/take-notes.component
 import { IconsComponent } from './components/icons/icons.component';
 
 
-
-
 // sets up routes constant where you define your routes
 const routes: Routes = [
   {path:'login' , component:LoginComponent},

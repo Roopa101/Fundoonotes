@@ -30,7 +30,7 @@ export class TakeNotesComponent implements OnInit {
         }, error => { console.log(error); })
       }
       else {
-        console.log("Form is not valid. Please Fill the form correct");
+        console.log("Form is not valid. Please Fill the form correctly");
       }
     }
   }

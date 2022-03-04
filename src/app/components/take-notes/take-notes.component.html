@@ -1,4 +1,4 @@
-<div fxLayout="row" fxLayoutAlign="center none">
+<!-- <div fxLayout="row" fxLayoutAlign="center none">
     <div fxLayout="column" fxLayoutAlign=" stretch" style="margin-top: 100px;">
         <mat-accordion class="card">
             <mat-expansion-panel hideToggle class="note2">
@@ -25,4 +25,19 @@
             </mat-expansion-panel>
           </mat-accordion>      
         </div>   
+</div> -->
+
+<div class="main" fxLayoutAlign="center center">
+    <mat-card fxLayout="column" fxFlex="100">
+        <div>
+            <input class="titlenote" matInput type="text" placeholder="Title" > 
+        </div>
+        <div>
+            <input class="note" matInput type="text" placeholder="Take a note..." >
+        </div>
+        <div>
+            <app-icons></app-icons>
+        </div>
+
+    </mat-card>
 </div>

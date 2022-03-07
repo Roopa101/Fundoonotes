@@ -8,17 +8,20 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TakeNotesComponent } from './components/take-notes/take-notes.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { AuthenticationGuard } from './authentication.guard';
-
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 // sets up routes constant where you define your routes
 const routes: Routes = [
+  { path: '', redirectTo: "/login", pathMatch: 'full' },
+
   {path:'login' , component:LoginComponent},
   {path:'signup' , component:SignupComponent},
   {path:'forget' , component:ForgetComponent},
   {path:'resetpassword/:token' , component:ResetComponent },
-  { path: 'dashboard' , component:DashboardComponent,canActivate:[AuthenticationGuard]},
-  { path :'take-notes', component:TakeNotesComponent},
-  { path :'icons', component:IconsComponent}
+  { path: 'dashboard' , component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
+    { path: '', redirectTo: "notes", pathMatch: "full" },
+    { path: 'notes',component:GetAllNotesComponent}]},
   
+
 ];
 
 // configures NgModule imports and exports

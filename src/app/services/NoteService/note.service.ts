@@ -21,7 +21,19 @@ export class NoteService {
         }
       )
     }
-   console.log("take note called")
-   return this.httpService.postService('/notes/addNotes',data,true,headersObject)
+  console.log("take note called",data)
+  return this.httpService.postService('/notes/addNotes',data,true,headersObject)
   }
+  getallnotes()
+  {
+   let headersObject = {
+     headers: new HttpHeaders({
+       'Content-Type': 'application/json',
+       'Authorization': this.token
+     })
+   }
+   console.log("get-all-notes called in service notes");
+   return this.httpService.getService('/notes/getNotesList',true,headersObject)
+  }
+
 }

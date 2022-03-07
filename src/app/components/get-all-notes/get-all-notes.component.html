@@ -1,1 +1,2 @@
-<p>get-all-notes works!</p>
+<app-take-notes  (autorefreshEvent)="Message($event)"></app-take-notes>
+<app-displaynotes fxLayout="row"  [allnotes] ="notesarray"></app-displaynotes>

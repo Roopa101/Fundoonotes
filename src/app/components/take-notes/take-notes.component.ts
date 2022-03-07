@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { NoteService } from 'src/app/services/NoteService/note.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class TakeNotesComponent implements OnInit {
   description: any;
   submitted = false;
   isWrite = false;
+  @Output() autorefreshEvent = new EventEmitter<string>();
 
   constructor(private noteService: NoteService) { }
 
@@ -27,6 +28,8 @@ export class TakeNotesComponent implements OnInit {
     if (this.title && this.description) {
       this.noteService.takenotes(reqData).subscribe((Response: any) => {
         console.log(Response);
+        this.autorefreshEvent.emit(Response)
+
         localStorage.setItem("token", Response.id)
       }, error => { console.log(error); })
     }

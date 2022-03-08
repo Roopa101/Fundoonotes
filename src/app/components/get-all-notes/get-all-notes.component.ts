@@ -17,11 +17,24 @@ notesarray:any;
     this.getallnotes()
 
   }
+
+
+  autoRefresh(data:any)
+  {
+     console.log("refreshed",data);
+     this.getallnotes();
+  }
+  
   getallnotes()
   {
     this.noteService.getallnotes().subscribe((response:any)=>{
     this.notesarray=response.data.data;
     console.log(this.notesarray);
+    this.notesarray = this.notesarray.filter((data: any) => {
+      console.log(data.isDeleted)
+      
+      return data.isDeleted === false && data.isArchived === false;
+    })
     },error=>{console.log(error)});
   }
   Message(e:any){  

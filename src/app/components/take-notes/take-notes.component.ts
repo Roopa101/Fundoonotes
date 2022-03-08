@@ -7,16 +7,19 @@ import { NoteService } from 'src/app/services/NoteService/note.service';
   styleUrls: ['./take-notes.component.scss']
 })
 export class TakeNotesComponent implements OnInit {
+@Output() createNoteToRefresh= new EventEmitter<any>();
+
   title: any;
   description: any;
   submitted = false;
   isWrite = false;
-  @Output() autorefreshEvent = new EventEmitter<string>();
 
   constructor(private noteService: NoteService) { }
 
   ngOnInit(): void {
+   
   }
+
 
   add() {
     let reqData = {
@@ -28,19 +31,22 @@ export class TakeNotesComponent implements OnInit {
     if (this.title && this.description) {
       this.noteService.takenotes(reqData).subscribe((Response: any) => {
         console.log(Response);
-        this.autorefreshEvent.emit(Response)
+        this.title=''
+        this.description='';
+        this.createNoteToRefresh.emit(Response)
 
-        localStorage.setItem("token", Response.id)
+        // localStorage.setItem("token", Response.id)
       }, error => { console.log(error); })
     }
     else {
       console.log("Form is not valid. Please Fill the form correctly..");
     }
-
+    
 
   }
   method()
 {
   return this.isWrite === true ? (this.isWrite = false) : (this.isWrite = true);  // turnary operator is used here
 }
+
 }

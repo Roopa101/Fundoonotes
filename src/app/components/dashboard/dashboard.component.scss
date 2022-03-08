@@ -1,153 +1,3 @@
-// .example-container {
-//   display: flex;
-//   flex-direction: column;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-// }
-
-// .toolbar{
-//   background-color: white;
-//   border-bottom: 0.5px solid whitesmoke;
-// }
-// .menu{
-  
-//   opacity: 60%;  
-//   border-radius: 50%;
-//   margin-left: 12px;
-//   padding: 0;
-//   width: 50px;
-// }
-
-// .header{
-//   font-family:cursive;
-//   font-style: bold;    
-//   margin-top:5%;
-//   text-align: center;
-//   font-weight: 600;
-//   margin-left: 15px;
-//   font-size: larger;
-// }
-// .boxContainer{
-//    margin:auto;
-//    width: 500px;
-//    height: 45px;
-//    margin-left: 150px;
-//    margin-right: 250px;
-//    border-radius: 5px;
-//    border:1px solid grey;
-//    background-color: white;
-// }
-// .search{
-//   border: none;
-
-//   width: 350px;
-//   height:38px ;
-//   border-radius: 10px;
-// }
-// .search:focus{
-//   outline: none;
-// }
-// .searching{
-//    border-radius: 20px;
-//    width: 25px;
-// }
-// .refresh{
-//   // display:block;
-//   margin-left: 2px;
-//   margin-right: 200x;
-
-//   height: 30px;
-//   width: 30px;   
-//   opacity: 60%;
-// }
-// .view{
-//   display:block;
-//   height: 35px;
-//   width: 30px;   
-//   opacity: 60%;
-// }
-// .settings{
-//   display:block;
-//   height: 30px;
-//   width: 30px;   
-//   opacity: 60%;
-//   text-align: center;
-// }
-// .grid view{
-//   display:block;
-//   margin-left: 10px;
-//   margin-right: 20px;
-//   height: 25px;
-//   width: 25px;   
-//   opacity: 60%;
-// }
-// .profileimage{
-//   display:block;
-//   height: 25px;
-//   width: 25px;   
-//   opacity: 60%; 
-// }
-// .link{
-//   width: 250px;
-//   height: 50px;
-//   font-weight:900;  
-//   opacity: 60%;
-  
-// }
-// .icons{
-//   height: 48px;
-//   opacity: 60%;  
-//   border-radius: 50%;
-//   margin-left: 12px;
-//   padding: 0;
-//   width: 50px;
-// }
-// .iconbar{
-//  padding-top: 8px;
-// }
-// // .example-is-mobile .example-toolbar {
-// //     position: fixed;
-// //     /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-// //     z-index: 2;
-// //   }
-// //   .example-sidenav-container {
-// //     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-// //        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-// //     flex: 1;
-// //   }
-
-
-// .example-is-mobile .example-toolbar {
-//   position: fixed;
-//   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-//   z-index: 2;
-// }
-
-// h1.example-app-name {
-//   margin-left: 8px;
-// }
-
-// .example-sidenav-container{
-//   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-//      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-//   flex: 1;
-//   width:1280px;
-//   height: 600px;
-//   background-color: white;
-// }
-
-// .example-is-mobile .example-sidenav-container {
-//   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-//      `<body>` to be our scrolling element for mobile layouts. */
-//   flex: 1 0 auto;
-// }
-
-
-
-
 .keep {
   width : 40px;
   height: 40px;
@@ -163,7 +13,7 @@
   width: 800px;
   height: 45px;
   border-radius: 6px;
-  border: 1px solid lightgrey;
+  border: 0.5px solid lightgrey;
 }
 .search{
   border-radius: 20px;
@@ -171,8 +21,8 @@
 
 }
 .searchtext{
-  border:none;
-  width: 545px;
+  border:wheat;
+  width: 550px;
   height: 30px;
   border-radius: 5px;
   font-size: 17px;

@@ -1,2 +1,2 @@
-<app-take-notes  (autorefreshEvent)="Message($event)"></app-take-notes>
+<app-take-notes  (createNoteToRefresh)="autoRefresh($event)"></app-take-notes>
 <app-displaynotes fxLayout="row"  [allnotes] ="notesarray"></app-displaynotes>

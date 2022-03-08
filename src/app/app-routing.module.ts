@@ -9,6 +9,10 @@ import { TakeNotesComponent } from './components/take-notes/take-notes.component
 import { IconsComponent } from './components/icons/icons.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
+import { ArchievenotesComponent } from './components/archievenotes/archievenotes.component';
+import { TrashlistComponent } from './components/trashlist/trashlist.component';
+
 // sets up routes constant where you define your routes
 const routes: Routes = [
   { path: '', redirectTo: "/login", pathMatch: 'full' },
@@ -19,7 +23,14 @@ const routes: Routes = [
   {path:'resetpassword/:token' , component:ResetComponent },
   { path: 'dashboard' , component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
     { path: '', redirectTo: "notes", pathMatch: "full" },
-    { path: 'notes',component:GetAllNotesComponent}]},
+    { path: 'notes',component:GetAllNotesComponent},
+   { path: 'display',component:DisplaynotesComponent},
+
+   { path: 'archievenotes',component:ArchievenotesComponent},
+   { path: 'trashlist',component:TrashlistComponent},
+
+
+  ]}
   
 
 ];

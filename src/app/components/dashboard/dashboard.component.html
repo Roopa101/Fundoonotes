@@ -1,140 +1,6 @@
-
-     <!-- <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-      <mat-toolbar color="white" class="toolbar" >
-        <div class="menu">
-          <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        </div>
-        
-        <img class="logo" src="../../../assets/keeps.png"width="35px" height="35px" />
-      
-      <div>
-          <h1 class="header" >
-          <span style='color:blue;'>F</span>
-          <span style='color:red;'>u</span>
-          <span style='color:yellow'>n</span>
-          <span style='color:blue;'>d</span>
-          <span style='color:green;'>o</span>
-          <span style='color:red;'>o</span>
-          </h1>        
-      </div>
-      <div class="boxContainer" fxLayout="row" fxLayoutAlign="start center" fxfill>
-        
-        <div>
-              <button mat-button class="searching"><img src="../../../assets/outline_search_black_24dp.png" style="width:25px; height: 25px;opacity: 60%;" />
-              </button>
-              
-          </div>
-          <div class="search">
-            <button mat-button >
-              <input  type="text" placeholder="Search"
-              class="search">
-            </button>
-              
-              
-          </div>                     
-      </div>
-      
-      <div>  
-          <button mat-button class="refresh" ><img src="../../../assets/outline_refresh_black_24dp.png" width="25px" height="25px"/>
-          </button> 
-      </div> 
-      <div>  
-          <button mat-button class="view" ><img src="../../../assets/outline_view_stream_black_24dp.png" width="25px" height="25px"/>
-          </button> 
-      </div> 
-      <div>  
-          <button mat-button class="settings" ><img src="../../../assets/outline_settings_black_24dp.png" width="25px" height="25px"/>
-          </button> 
-      </div>
-      <div>  
-        <button mat-button class="grid view" ><img src="../../../assets/google apps.png" width="18px" height="18px"/>
-        </button> 
-    </div>
-    <div>  
-      <button mat-button class="progile" ><img src="../../../assets/profileimage.png" width="20px" height="20px"/>
-      </button> 
-  </div>
-      </mat-toolbar>
-   
-      <div fxLayout="row" fxLayoutAlign="start"> 
-    <div class="iconbar">
-          <div class="example-sidenav-content">
-            <button type="button" class="icons" mat-button (click)="snav.toggle()">
-              <img class="img" src="../../../assets/outline_lightbulb_black_24dp.png"  width="25px" height="25px" />
-              </button>
-              
-          </div>
-          <div class="example-sidenav-content">
-              <button type="button" class="icons" mat-button (click)="snav.toggle()">
-                <img class="img" src="../../../assets/outline_notifications_black_24dp.png" width="25px" height="25px" />
-                </button>
-                
-            </div>
-            <div class="example-sidenav-content">
-              <button type="button" class="icons" mat-button (click)="snav.toggle()">
-                <img class="img" src="../../../assets/outline_edit_black_24dp.png" width="25px" height="25px" />
-                </button>
-                
-            </div>
-            <div class="example-sidenav-content">
-              <button type="button" class="icons" mat-button (click)="snav.toggle()">
-                <img class="img" src="../../../assets/outline_archive_black_24dp.png" width="25px" height="25px" />
-                </button>
-                
-            </div>
-            <div class="example-sidenav-content">
-              <button type="button" class="icons" mat-button (click)="snav.toggle()">
-                <img class="img" src="../../../assets/outline_delete_black_24dp.png" width="25px" height="25px" />
-                </button>
-                
-            </div>
-          </div>      
-          
-  <div>
-      <mat-sidenav-container 
-      class="example-sidenav-container" style="border: black;"
-      [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-  
-        
-      <mat-sidenav style="border: 1px solid whitesmoke; width: 200px;"
-      #snav 
-      [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-          
-        <mat-nav-list >
-          
-          <a class="link" mat-list-item routerLink="." style="text-align: center;">Notes</a>
-          <a class="link" mat-list-item routerLink=".">Reminders</a>
-          <a class="link" mat-list-item routerLink=".">Edit Labels</a>
-          <a class="link" mat-list-item routerLink=".">Archive</a>
-          <a class="link" mat-list-item routerLink=".">Bin</a> -->
-            <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
-        <!-- </mat-nav-list>
-        </mat-sidenav>
-        
-          
-        
-        <mat-sidenav-content style="overflow:hidden;"> 
-          <router-outlet></router-outlet> -->
-           <!-- <div fxLayout="column" fxLayoutAlign="space-between center" >
-            <div>
-              <app-take-notes></app-take-notes>
-            </div>
-
-          </div>
-          <p *ngFor="let content of fillerContent"></p> -->
-          
-         <!-- </mat-sidenav-content>
-      </mat-sidenav-container>
-    </div>
-  </div>
-  
-    </div> -->
-   
     
-
- <div class="container" [class.example-is-mobile]="mobileQuery.matches">
-      <mat-toolbar class="toolbar">
+<div class="container" [class.example-is-mobile]="mobileQuery.matches">
+         <mat-toolbar class="toolbar">
         <button mat-icon-button class="menu" (click)="isExpanded=!isExpanded"><img src="../../../assets/menu.png"  width="30px" height="30px"></button>
         <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px">
           <img class="keep" src="../../../assets/keeps.png" alt="">
@@ -173,18 +39,21 @@
             <button mat-icon-button><img src="../../../assets/google apps.png"  width="20px" height="20px"></button>
           </div>
           <div>
-            <button mat-icon-button><img src="../../../assets/profileimage.png" width="20px" height="20px"></button>
+            <button mat-icon-button [matMenuTriggerFor]="menu"><img src="../../../assets/profileimage.png" width="20px" height="20px"></button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
           </div>
         </div>
       </mat-toolbar>
       <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
           <mat-sidenav #snav  [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" opened="true">
-                <mat-nav-list (click)="isExpanded=!isExpanded" >            
-                  <mat-list-item class="icons"><div><button mat-icon-button class="btns"><img src="../../../assets/outline_lightbulb_black_24dp.png"  width="25px" height="25px"></button></div><p class="names" *ngIf="isExpanded">Notes</p> </mat-list-item>             
+                <mat-nav-list (mouseover)="isExpanded=true" (mouseleave)="isExpanded=false" >            
+                  <mat-list-item class="icons"><div><button mat-icon-button class="btns" ><img src="../../../assets/outline_lightbulb_black_24dp.png"  width="25px" height="25px"></button></div><p class="names" *ngIf="isExpanded">Notes</p> </mat-list-item>             
                   <mat-list-item class="icons"><button mat-icon-button class="btns"><img src="../../../assets/outline_notifications_black_24dp.png" width="25px" height="25px"></button><p class="names" *ngIf="isExpanded">Reminders</p> </mat-list-item>        
                   <mat-list-item class="icons"><button mat-icon-button class="btns"><img src="../../../assets/outline_edit_black_24dp.png" width="25px" height="25px"></button><p class="names" *ngIf="isExpanded">Edit labels</p> </mat-list-item>               
-                  <mat-list-item class="icons"><button mat-icon-button class="btns"><img src="../../../assets/outline_archive_black_24dp.png" width="25px" height="25px" ></button><p class="names" *ngIf="isExpanded">Archive</p> </mat-list-item>                  
-                  <mat-list-item class="icons"><button mat-icon-button class="btns"><img src="../../../assets/outline_delete_black_24dp.png" width="25px" height="25px" ></button><p class="names" *ngIf="isExpanded">Trash</p> </mat-list-item>  
+                  <mat-list-item class="icons"><button mat-icon-button class="btns" (click)="arch()"><img src="../../../assets/outline_archive_black_24dp.png" width="25px" height="25px" ></button><p class="names" *ngIf="isExpanded">Archive</p> </mat-list-item>                  
+                  <mat-list-item class="icons"><button mat-icon-button class="btns" (click)="trash()"><img src="../../../assets/outline_delete_black_24dp.png" width="25px" height="25px" ></button><p class="names" *ngIf="isExpanded">Trash</p> </mat-list-item>  
                 </mat-nav-list>
           </mat-sidenav>
           <mat-sidenav-content class="content">

@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       Password: ['', [Validators.required, Validators.minLength(6)]],
       cPassword: ''
     });
-    localStorage.setItem("SessionUser", this.user)
+    localStorage.setItem("token", this.user)
   }
 
 
@@ -49,6 +49,8 @@ export class LoginComponent implements OnInit {
         console.log("login successfully", response);
         localStorage.setItem("token", response.id)
         this.router.navigateByUrl('/dashboard')
+       
+
       }, error => {
         console.log(error);
       })

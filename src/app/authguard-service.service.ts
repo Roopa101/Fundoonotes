@@ -9,7 +9,8 @@ export class AuthguardServiceService {
 
 
   gettoken(){  
-    return !!localStorage.getItem("SessionUser");  
+    console.log("called");
+    return !!localStorage.getItem("token");  
     }  
  }  
 

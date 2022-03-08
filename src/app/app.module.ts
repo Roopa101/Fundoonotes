@@ -32,6 +32,12 @@ import { IconsComponent } from './components/icons/icons.component';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import { AuthguardServiceService } from './authguard-service.service';
+import { UpdatenotesComponent } from './components/updatenotes/updatenotes.component';
+import { DeletenotesComponent } from './components/deletenotes/deletenotes.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ArchievenotesComponent } from './components/archievenotes/archievenotes.component';
+import { TrashlistComponent } from './components/trashlist/trashlist.component';
+
 
 
 
@@ -46,7 +52,11 @@ import { AuthguardServiceService } from './authguard-service.service';
     TakeNotesComponent,
     GetAllNotesComponent,
     DisplaynotesComponent,
-    IconsComponent
+    IconsComponent,
+    UpdatenotesComponent,
+    DeletenotesComponent,
+    ArchievenotesComponent,
+    TrashlistComponent
   
   ],
   imports: [
@@ -62,7 +72,7 @@ import { AuthguardServiceService } from './authguard-service.service';
     MatCardModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule,MatDividerModule,MatMenuModule,MatExpansionModule
+    HttpClientModule,MatSidenavModule,MatToolbarModule,MatListModule,MatDividerModule,MatMenuModule,MatExpansionModule,MatDialogModule
   ],
   providers: [
     AuthguardServiceService

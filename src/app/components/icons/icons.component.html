@@ -1,42 +1,27 @@
-<!-- 
-<div fxLayout="row" fxLayoutAlign="start none">
-<div>
-    <button type="button" class="icons" mat-button>
-        <img class="images" src="../../../assets/Remind me.png" width="15px" height="15px" />
-    </button>
+
+<div fxLayout="row" fxLayoutGap="-2px" class="icons" >
+    <button mat-icon-button><img src="../../../assets/Remind me.png" alt="" width="20px" height="20px"></button>
+    <button mat-icon-button><img src="../../../assets/Collaborator.png" alt="" width="20px" height="20px"></button>
+    <button mat-icon-button><img src="../../../assets/Background options.png" alt="" width="20px" height="20px"></button>
+    <button mat-icon-button><img src="../../../assets/AddImage.png" alt="" width="20px" height="20px"></button>
+   <div >
+    <button mat-icon-button (click)="archieve()"><img src="../../../assets/Archieve.png" alt="" width="20px" height="20px"></button>
+
+
+   </div>
+    <div  [matMenuTriggerFor]="menu">
+        <button mat-icon-button><img src="../../../assets/more.png" alt="" width="20px" height="20px"></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="delete()">Delete Note</button>
+            <button mat-menu-item>Add Label</button>
+            <button mat-menu-item>Add Drawing</button>
+            <button mat-menu-item>Make A copy</button>
+    
+            <button mat-menu-item>Show tick boxes</button>
+          </mat-menu>
+
 </div>
-<div>
-    <button type="button" class="icons" mat-button>
-        <img class="images" src="../../../assets/Collaborator.png" width="15px" height="15px" />
-    </button>
-</div>
-<div>
-    <button type="button" class="icons" mat-button>
-        <img class="images" src="../../../assets/Background options.png" width="15px" height="15px" />
-    </button>
-</div>
-<div>
-    <button type="button" class="icons" mat-button>
-        <img class="images" src="../../../assets/AddImage.png" width="15px" height="15px" />
-    </button>
-</div>
-<div>
-    <button type="button" class="icons" mat-button>
-        <img class="images" src="../../../assets/Archieve.png" width="15px" height="15px" />
-    </button>
-</div>
-<div>
-    <button type="button" class="icons" mat-button>
-        <img class="images" src="../../../assets/more.png" width="15px" height="15px" />
-    </button>
-</div>
-</div> -->
-<div fxLayout="row" fxLayoutGap="16px" class="icons">
-    <button mat-icon-button><img src="../../../assets/Remind me.png" alt=""></button>
-    <button mat-icon-button><img src="../../../assets/Collaborator.png" alt=""></button>
-    <button mat-icon-button><img src="../../../assets/Background options.png" alt=""></button>
-    <button mat-icon-button><img src="../../../assets/AddImage.png" alt=""></button>
-    <button mat-icon-button><img src="../../../assets/Archieve.png" alt=""></button>
-    <button mat-icon-button><img src="../../../assets/more.png" alt=""></button>
+
+    
     <!-- <button class="close" mat-flat-button>Close</button> -->
 </div>

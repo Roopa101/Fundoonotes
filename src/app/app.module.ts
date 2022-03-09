@@ -37,6 +37,7 @@ import { DeletenotesComponent } from './components/deletenotes/deletenotes.compo
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArchievenotesComponent } from './components/archievenotes/archievenotes.component';
 import { TrashlistComponent } from './components/trashlist/trashlist.component';
+// import { SearchpipePipe } from './Pipe/searchpipe.pipe';
 
 
 
@@ -56,7 +57,8 @@ import { TrashlistComponent } from './components/trashlist/trashlist.component';
     UpdatenotesComponent,
     DeletenotesComponent,
     ArchievenotesComponent,
-    TrashlistComponent
+    TrashlistComponent,
+    // SearchpipePipe
   
   ],
   imports: [

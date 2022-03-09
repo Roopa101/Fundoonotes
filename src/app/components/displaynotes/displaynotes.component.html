@@ -1,7 +1,7 @@
 <div class="style" fxFlexFill fxLayout="row wrap" fxLayoutGap="50px grid"  >
        
         <div  *ngFor="let note of allnotes" >
-            <mat-card class="matcard"  [style.background]="note.color"
+            <mat-card  class="matcard"  [style.background]="note.color"
             >
                 <div >
                 <mat-card-title (click)="dialogOpen(note)">

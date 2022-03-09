@@ -1,5 +1,8 @@
 import { Component,Input,Output,EventEmitter, OnInit } from '@angular/core';
 import { NoteService } from 'src/app/services/NoteService/note.service';
+import { ActivatedRoute } from '@angular/router';
+import { ArchievenotesComponent } from '../archievenotes/archievenotes.component';
+import { TrashlistComponent } from '../trashlist/trashlist.component';
 
 @Component({
   selector: 'app-icons',
@@ -10,34 +13,41 @@ export class IconsComponent implements OnInit {
   @Input() noteObject: any;
   
   @Output() changeColorOfNote = new EventEmitter<any>();
- 
-  colors = [
-    {
-      name: 'Red', bgColorValue: '#f28b82'
-    },  
-    
-    {
-      name: 'Yellow', bgColorValue: '#FFFEA9'
-    },
-    {
-      name: 'Light Green', bgColorValue: '#E4E978'
-    },
-    {
-      name: 'Lime', bgColorValue: '#B3E283'
-    },
-    {
-      name: 'Teal', bgColorValue: '#CDF0EA'
-    },
-    {
-      name: 'white', bgColorValue: '#ffffff'
-    }
+
+  isArchiveNotesComponent=false;
+  isTrashNotesComponent=false;
+
+  colors = [{bgColorValue:'#fff'},
+  {bgColorValue:'#f28b82'},
+  {bgColorValue:'#fbbc04'},
+  {bgColorValue:'#fff475'},
+  {bgColorValue:'#ccff90'},
+  {bgColorValue:'#a7ffeb'},
+  {bgColorValue:'#cbf0f8'},
+  {bgColorValue:'#aecbfa'},
+  {bgColorValue:'#d7aefb'},
+  {bgColorValue:'#fdcfe8'},
+  {bgColorValue:'#e6c9a8'},
+  {bgColorValue:'#e8eaed'}
   ];
 
-  constructor(private noteService: NoteService)  { }
+  constructor(private noteService: NoteService, private router:ActivatedRoute)  { }
 
 
   ngOnInit(): void {
     console.log(this.noteObject)
+    let Component = this.router.snapshot.component;
+   
+    if (Component == ArchievenotesComponent) {
+      this.isArchiveNotesComponent = true;
+      console.log(this.isArchiveNotesComponent);
+    }
+    
+  
+if (Component == TrashlistComponent) {
+      this.isTrashNotesComponent = true;
+      console.log(this.isTrashNotesComponent);
+    }
   }
   delete() {
     let reqdata = {
@@ -50,6 +60,30 @@ export class IconsComponent implements OnInit {
     })
   
   }
+  
+  deleteforevernote() {
+    let reqdata = {
+      noteIdList: [this.noteObject.id],
+      isDeleted: true,
+    }
+    this.noteService.permanentDeleteNote(reqdata).subscribe((response: any) => {
+     console.log("note is deleted permanently")
+      console.log(response);
+    })
+  
+  }
+
+  restorenote() {
+    let reqdata = {
+      noteIdList: [this.noteObject.id],
+      isDeleted: false,
+    }
+    this.noteService.deleteNote(reqdata).subscribe((response: any) => {
+     console.log("note is restored")
+      console.log(response);
+    })
+  
+  }
 
   archieve() {
     let reqdata = {
@@ -58,6 +92,17 @@ export class IconsComponent implements OnInit {
     }
     this.noteService.archievenote(reqdata).subscribe((response: any) => {
      console.log("note is archieved")
+      console.log(response);
+    })
+  
+  }
+  unarchieve() {
+    let reqdata = {
+      noteIdList: [this.noteObject.id],
+      isArchived: false,
+    }
+    this.noteService.archievenote(reqdata).subscribe((response: any) => {
+     console.log("note is unarchieved")
       console.log(response);
     })
   
@@ -81,6 +126,8 @@ export class IconsComponent implements OnInit {
     })
     window.location.reload();
   }
+
+  
   
 
 }

@@ -61,6 +61,17 @@ export class NoteService {
     return this.httpService.postService('/notes/trashNotes',data,true,headersObject)
   }
 
+  permanentDeleteNote(data: any){
+    let headersObject={
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':this.token
+      })
+    }
+    console.log(" permanent delete called in service notes")
+    return this.httpService.postService('/notes/deleteForeverNotes',data,true,headersObject)
+  }
+
   archievenote(data: any){
     let headersObject={
       headers: new HttpHeaders({
@@ -103,6 +114,7 @@ export class NoteService {
         'Authorization':this.token
       })
     }
+    console.log("colornote called")
     return this.httpService.postService('/notes/changesColorNotes',data,true,header)
    }
 

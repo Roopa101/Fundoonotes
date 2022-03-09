@@ -26,6 +26,9 @@ mobileQuery: MediaQueryList;
   ngOnInit(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
+  notes(){
+    this.router.navigateByUrl('dashboard/notes')
+  }
   logout() {    
     localStorage.removeItem('token')
     this.router.navigateByUrl('login');

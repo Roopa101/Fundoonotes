@@ -29,7 +29,10 @@ notesarray:any;
   {
     this.noteService.getallnotes().subscribe((response:any)=>{
     this.notesarray=response.data.data;
+    this.notesarray.reverse();
+
     console.log(this.notesarray);
+  
     this.notesarray = this.notesarray.filter((data: any) => {
       console.log(data.isDeleted)
       

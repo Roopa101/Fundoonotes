@@ -95,5 +95,16 @@ export class NoteService {
 
   }
 
+  usercolor(data:any){   
+     
+    let header= {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':this.token
+      })
+    }
+    return this.httpService.postService('/notes/changesColorNotes',data,true,header)
+   }
+
 
 }

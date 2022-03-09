@@ -1,8 +1,24 @@
 
-<div fxLayout="row" fxLayoutGap="-2px" class="icons" >
+<div fxLayout="row" fxLayoutGap="2px" class="icons" >
     <button mat-icon-button><img src="../../../assets/Remind me.png" alt="" width="20px" height="20px"></button>
     <button mat-icon-button><img src="../../../assets/Collaborator.png" alt="" width="20px" height="20px"></button>
-    <button mat-icon-button><img src="../../../assets/Background options.png" alt="" width="20px" height="20px"></button>
+    <!-- <button mat-icon-button><img src="../../../assets/Background options.png" alt="" width="20px" height="20px"></button> -->
+    <mat-icon>
+        <button [matMenuTriggerFor]="colorMenu" class="icon" fxLayout="row">
+        <img src="../../../assets/Background options.png" alt=""width="20px" height="20px" >
+    </button>
+    <mat-menu #colorMenu="matMenu">
+        <button mat-menu-item>
+            <button *ngFor="let noteColor of colors" mat-mini-fab [style.background]="noteColor?.bgColorValue"
+                (click)="changeColor(noteColor?.bgColorValue)">
+
+
+            </button>
+            
+        </button>
+    </mat-menu>
+</mat-icon>
+
     <button mat-icon-button><img src="../../../assets/AddImage.png" alt="" width="20px" height="20px"></button>
    <div >
     <button mat-icon-button (click)="archieve()"><img src="../../../assets/Archieve.png" alt="" width="20px" height="20px"></button>

@@ -1,20 +1,23 @@
-<div class="content" >
-    <div style="margin-top: 100px; margin-left: 80px;">
-    <div fxLayout="row wrap" >
+<div class="style" fxFlexFill fxLayout="row wrap" fxLayoutGap="50px grid"  >
        
-        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let note of allnotes" >
-            <mat-card  style="width:210px;height: 70px; margin-bottom: 50px; margin-right: 20px;">
-                <div  (click)="dialogOpen(note)">
-                    <strong>{{note.title}}</strong>
+        <div  *ngFor="let note of allnotes" >
+            <mat-card class="matcard"  [style.background]="note.color"
+            >
+                <div >
+                <mat-card-title (click)="dialogOpen(note)">
+                    {{note.title}}</mat-card-title>
                 </div>
-                <div>{{note.description}}</div>
+              
+                <div> 
+                    <mat-card-subtitle (click)="dialogOpen(note)">{{note.description}}</mat-card-subtitle>
+
+                    </div>
                 <div>
-                    <app-icons class="icons" [noteObject]="note"></app-icons>
+                    <app-icons class="icons" [noteObject]="note"   (changeColorOfNote)="message($event)"></app-icons>
                 </div>
             </mat-card>
 
         </div>
        
     </div>
-</div>
-</div>
+

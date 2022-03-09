@@ -49,7 +49,7 @@
       <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
           <mat-sidenav #snav  [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" opened="true">
                 <mat-nav-list (mouseover)="isExpanded=true" (mouseleave)="isExpanded=false" >            
-                  <mat-list-item class="icons"><div><button mat-icon-button class="btns" ><img src="../../../assets/outline_lightbulb_black_24dp.png"  width="25px" height="25px"></button></div><p class="names" *ngIf="isExpanded">Notes</p> </mat-list-item>             
+                  <mat-list-item class="icons"><div><button mat-icon-button class="btns" (click)="notes()"  ><img src="../../../assets/outline_lightbulb_black_24dp.png"  width="25px" height="25px"></button></div><p class="names" *ngIf="isExpanded">Notes</p> </mat-list-item>             
                   <mat-list-item class="icons"><button mat-icon-button class="btns"><img src="../../../assets/outline_notifications_black_24dp.png" width="25px" height="25px"></button><p class="names" *ngIf="isExpanded">Reminders</p> </mat-list-item>        
                   <mat-list-item class="icons"><button mat-icon-button class="btns"><img src="../../../assets/outline_edit_black_24dp.png" width="25px" height="25px"></button><p class="names" *ngIf="isExpanded">Edit labels</p> </mat-list-item>               
                   <mat-list-item class="icons"><button mat-icon-button class="btns" (click)="arch()"><img src="../../../assets/outline_archive_black_24dp.png" width="25px" height="25px" ></button><p class="names" *ngIf="isExpanded">Archive</p> </mat-list-item>                  

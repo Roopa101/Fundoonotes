@@ -22,7 +22,6 @@ GetAllArchiveNotes(){
 
     this.notesarchive=Response.data.data;
     console.log(this.notesarchive);
-      //  this.notesarchive.reverse()
 
     })
 }

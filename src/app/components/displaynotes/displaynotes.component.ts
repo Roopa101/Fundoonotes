@@ -34,6 +34,10 @@ export class DisplaynotesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  message(e:any){  
+    console.log(e);
+    
+  }
 
 }

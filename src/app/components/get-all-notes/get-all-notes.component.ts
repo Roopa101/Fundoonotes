@@ -24,6 +24,10 @@ notesarray:any;
      console.log("refreshed",data);
      this.getallnotes();
   }
+  // autoRefresharchive(data:any)
+  // {
+  //    console.log("refreshed",data);
+  // }
   
   getallnotes()
   {

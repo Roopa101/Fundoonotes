@@ -20,10 +20,10 @@
         <div class="searchBar" fxLayout="row" fxLayoutAlign="start center">
           <div>
             <button mat-icon-button class="search"><img src="../../../assets/outline_search_black_24dp.png"></button>
+            <input type="text" class="searchtext" placeholder="Search" (keyup)='search($event)'>
+          
           </div>
-          <div>
-            <input type="text" class="searchtext" placeholder="Search">
-          </div>
+          
         </div>
         <div class="headericons" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="20px">
           <div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { NoteService } from 'src/app/services/NoteService/note.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { NoteService } from 'src/app/services/NoteService/note.service';
   styleUrls: ['./archievenotes.component.scss']
 })
 export class ArchievenotesComponent implements OnInit {
+  // @Output() ArchiveToRefresh= new EventEmitter<any>();
+
   notesarchive:any
 
   constructor(private noteService:NoteService) { }
@@ -21,6 +23,7 @@ GetAllArchiveNotes(){
     //  console.log(Response.data.data);
 
     this.notesarchive=Response.data.data;
+    this.notesarchive.reverse();
     console.log(this.notesarchive);
 
     })

@@ -21,6 +21,8 @@ export class TrashlistComponent implements OnInit {
       //  console.log(Response.data.data);
   
       this.notestrash=Response.data.data;
+      this.notestrash.reverse();
+
       console.log(this.notestrash);
         //  this.notesarchive.reverse()
   

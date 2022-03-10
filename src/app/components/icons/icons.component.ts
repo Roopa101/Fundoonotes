@@ -11,7 +11,9 @@ import { TrashlistComponent } from '../trashlist/trashlist.component';
 })
 export class IconsComponent implements OnInit {
   @Input() noteObject: any;
-  
+  @Output() trashNoteToRefresh= new EventEmitter<any>();
+  @Output() archiveNoteToRefresh= new EventEmitter<any>();
+
   @Output() changeColorOfNote = new EventEmitter<any>();
 
   isArchiveNotesComponent=false;
@@ -57,6 +59,9 @@ if (Component == TrashlistComponent) {
     this.noteService.deleteNote(reqdata).subscribe((response: any) => {
      console.log("note is deleted")
       console.log(response);
+      this.trashNoteToRefresh.emit(Response)
+
+
     })
   
   }
@@ -69,6 +74,8 @@ if (Component == TrashlistComponent) {
     this.noteService.permanentDeleteNote(reqdata).subscribe((response: any) => {
      console.log("note is deleted permanently")
       console.log(response);
+
+
     })
   
   }
@@ -81,6 +88,7 @@ if (Component == TrashlistComponent) {
     this.noteService.deleteNote(reqdata).subscribe((response: any) => {
      console.log("note is restored")
       console.log(response);
+
     })
   
   }
@@ -93,6 +101,9 @@ if (Component == TrashlistComponent) {
     this.noteService.archievenote(reqdata).subscribe((response: any) => {
      console.log("note is archieved")
       console.log(response);
+      this.archiveNoteToRefresh.emit(Response)
+
+
     })
   
   }
@@ -104,6 +115,7 @@ if (Component == TrashlistComponent) {
     this.noteService.archievenote(reqdata).subscribe((response: any) => {
      console.log("note is unarchieved")
       console.log(response);
+
     })
   
   }
@@ -124,7 +136,7 @@ if (Component == TrashlistComponent) {
       
 
     })
-    window.location.reload();
+    // window.location.reload();
   }
 
   

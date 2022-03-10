@@ -1,20 +1,23 @@
 <div fxLayout="row" fxLayoutGap="2px" class="icons" *ngIf="!isTrashNotesComponent">
     <button mat-icon-button><img src="../../../assets/Remind me.png" alt="" width="20px" height="20px"></button>
     <button mat-icon-button><img src="../../../assets/Collaborator.png" alt="" width="20px" height="20px"></button>
-    <!-- <button mat-icon-button><img src="../../../assets/Background options.png" alt="" width="20px" height="20px"></button> -->
     <mat-icon>
         <button [matMenuTriggerFor]="colorMenu" class="icon" fxLayout="row">
             <img src="../../../assets/Background options.png" alt="" width="20px" height="20px">
         </button>
         <mat-menu #colorMenu="matMenu">
-            <button mat-menu-item>
+
+            <div fxLayout="row" fxLayoutAlign="start none" fxLayoutGap="10px"  >
+
                 <button *ngFor="let noteColor of colors" mat-mini-fab [style.background]="noteColor?.bgColorValue"
                     (click)="changeColor(noteColor?.bgColorValue)">
 
 
-                </button>
 
-            </button>
+
+                </button>
+            </div>
+
         </mat-menu>
     </mat-icon>
 
@@ -48,10 +51,13 @@
 </div>
 
 
-
-<div fxLayout="row" fxLayoutGap="150px" class="icons" *ngIf="isTrashNotesComponent">
-    <button mat-icon-button><img src="../../../assets/outline_delete_forever_black_24dp.png" alt="" width="20px"
-            height="20px" (click)="deleteforevernote()"></button>
-    <button mat-icon-button><img src="../../../assets/outline_restore_from_trash_black_24dp.png" alt="" width="20px"
-            height="20px" (click)="restorenote()"></button>
+<div fxLayout="row" class="width" fxLayoutGap="5px"  fxLayoutAlign="start start" *ngIf="isTrashNotesComponent">
+    <div>
+        <button mat-icon-button><img src="../../../assets/outline_delete_forever_black_24dp.png" alt="" width="20px"
+                height="20px" (click)="deleteforevernote()"></button>
+    </div>
+    <div>
+        <button mat-icon-button><img src="../../../assets/outline_restore_from_trash_black_24dp.png" alt="" width="20px"
+                height="20px" (click)="restorenote()"></button>
+    </div>
 </div>

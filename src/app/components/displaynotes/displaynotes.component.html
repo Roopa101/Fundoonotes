@@ -1,23 +1,25 @@
 <div class="style" fxFlexFill fxLayout="row wrap" fxLayoutGap="50px grid"  >
        
-        <div  *ngFor="let note of allnotes" >
-            <mat-card  class="matcard"  [style.background]="note.color"
-            >
-                <div >
-                <mat-card-title (click)="dialogOpen(note)">
-                    {{note.title}}</mat-card-title>
-                </div>
-              
-                <div> 
-                    <mat-card-subtitle (click)="dialogOpen(note)">{{note.description}}</mat-card-subtitle>
+    <div  
+    *ngFor='let note of allnotes | searchFilter:searchWord'   >
+        <mat-card  class="matcard"  [style.background]="note.color"
+        >
+            <div >
+            <mat-card-title (click)="dialogOpen(note)">
+                {{note.title}}</mat-card-title>
+            </div>
+          
+            <div> 
+                <mat-card-subtitle (click)="dialogOpen(note)">{{note.description}}</mat-card-subtitle>
 
-                    </div>
-                <div>
-                    <app-icons class="icons" [noteObject]="note"   (changeColorOfNote)="message($event)"></app-icons>
                 </div>
-            </mat-card>
+            <div>
+                <app-icons class="icons" [noteObject]="note"  (trashNoteToRefresh)="trash($event)" (archiveNoteToRefresh)="archive($event)"
 
-        </div>
-       
+                (changeColorOfNote)="message($event)"></app-icons>
+            </div>
+        </mat-card>
+
     </div>
-
+   
+</div>

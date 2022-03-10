@@ -1,22 +1,44 @@
 .icons{
-    opacity: 0.7;
-    font-weight:lighter;
-    font-style: normal;
-  }
-  .more{
-    
-    opacity: 0.7;
-    font-weight:lighter;
-    font-style: normal;
-  }
+  opacity: 0.7;
+  font-weight:lighter;
+  font-style: normal;
+}
+.icon1{
+  opacity: 0.7;
+  font-weight:lighter;
+  font-style: normal;
+}
+.more{
   
-  .icon{
-    cursor: pointer;
-    border: none;
-    background: none;
-    margin-top: 10px;
-    margin-left: -5px;
-    margin-right: 30px;
-    
-    // background-color: white;
-  }
+  opacity: 0.7;
+  font-weight:lighter;
+  font-style: normal;
+}
+.width{
+  width: 210px;
+}
+.icon{
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-top: 10px;
+  margin-left: -5px;
+  margin-right: 30px;
+  max-width: 170px;
+  
+  // background-color: white;
+}
+.display{
+  padding-right: 150px;
+
+  .btn:hover{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: darkgray;
+}
+
+
+}
+::ng-deep.mat-menu-panel {
+  max-width: none !important;
+}

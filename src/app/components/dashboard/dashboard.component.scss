@@ -8,18 +8,33 @@
   font-size: 22px;
   color: #5f6368;
 }
-.searchBar {
-  margin-left: 180px;
-  width: 800px;
-  height: 45px;
-  border-radius: 6px;
-  border: 0.5px solid lightgrey;
+
+
+.searchBar{
+  height : 40px;
+  border : 0.05px solid rgb(211, 205, 205);
+  border-radius : 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 150px;
+  background-color: transparent;
+  background-color: #ebebeb;
+}
+
+
+.input{
+  width: 450px;
+  height: 40px;
+  outline: none;
+  border: none;
+  
 }
 .search{
   border-radius: 20px;
   width: 55px;  
 
 }
+
 .searchtext{
   border:wheat;
   width: 550px;
@@ -28,6 +43,7 @@
   font-size: 17px;
   background-color: white;
 }
+
 .stext:focus{
   outline: none;
 }

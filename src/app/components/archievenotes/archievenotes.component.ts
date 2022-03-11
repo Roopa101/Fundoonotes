@@ -25,4 +25,9 @@ GetAllArchiveNotes(){
 
     })
 }
+
+unarchive(e:any){
+  this.GetAllArchiveNotes();
+}
+
 }

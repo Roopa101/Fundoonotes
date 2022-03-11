@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
       Password: ['', [Validators.required, Validators.minLength(6)]],
       cPassword: ''
     });
-    localStorage.setItem("token", this.user)
   }
 
 

@@ -1,32 +1,21 @@
 <div fxLayout="row" fxLayoutGap="2px" class="icons" *ngIf="!isTrashNotesComponent">
     <button mat-icon-button><img src="../../../assets/Remind me.png" alt="" width="20px" height="20px"></button>
     <button mat-icon-button><img src="../../../assets/Collaborator.png" alt="" width="20px" height="20px"></button>
-    <mat-icon>
-        <button [matMenuTriggerFor]="colorMenu" class="icon" fxLayout="row">
-            <img src="../../../assets/Background options.png" alt="" width="20px" height="20px">
-        </button>
-        <mat-menu #colorMenu="matMenu">
-
-            <div fxLayout="row" fxLayoutAlign="start none" fxLayoutGap="10px"  >
-
-                <button *ngFor="let noteColor of colors" mat-mini-fab [style.background]="noteColor?.bgColorValue"
-                    (click)="changeColor(noteColor?.bgColorValue)">
 
 
-
-
-                </button>
-            </div>
-
-        </mat-menu>
-    </mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="colormenu"><img src="../../../assets/Background options.png" alt=""width="20px" height="20px" ></button>
+    <mat-menu #colormenu="matMenu">
+        <div class="wrapcolor" fxLayoutGap="7px grid">
+            <button class="btn" *ngFor="let color of colors" mat-mini-fab [style.background-color]="color"
+                (click)="changeColor(color)">
+            </button>
+        </div>
+    </mat-menu>
 
     <button mat-icon-button><img src="../../../assets/AddImage.png" alt="" width="20px" height="20px"></button>
     <div *ngIf="!isArchiveNotesComponent">
         <button mat-icon-button (click)="archieve()"><img src="../../../assets/Archieve.png" alt="" width="20px"
                 height="20px"></button>
-
-
     </div>
     <div *ngIf="isArchiveNotesComponent">
         <button mat-icon-button (click)="unarchieve()"><img src="../../../assets/outline_unarchive_black_24dp.png"
@@ -51,7 +40,7 @@
 </div>
 
 
-<div fxLayout="row" class="width" fxLayoutGap="5px"  fxLayoutAlign="start start" *ngIf="isTrashNotesComponent">
+<div fxLayout="row" class="width" fxLayoutGap="5px" fxLayoutAlign="start start" *ngIf="isTrashNotesComponent">
     <div>
         <button mat-icon-button><img src="../../../assets/outline_delete_forever_black_24dp.png" alt="" width="20px"
                 height="20px" (click)="deleteforevernote()"></button>

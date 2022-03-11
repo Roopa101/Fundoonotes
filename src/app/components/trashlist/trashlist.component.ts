@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output,EventEmitter } from '@angular/core';
 import { NoteService } from 'src/app/services/NoteService/note.service';
 
 @Component({
@@ -25,6 +25,14 @@ export class TrashlistComponent implements OnInit {
         //  this.notesarchive.reverse()
   
       })
+  }
+  restoreNote(e:any){
+    this.GetAllTrashNotes();
+
+
+  }
+  trash(e:any){
+    this.GetAllTrashNotes();
   }
 
 }

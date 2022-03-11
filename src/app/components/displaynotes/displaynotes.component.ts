@@ -17,6 +17,7 @@ export class DisplaynotesComponent implements OnInit {
   @Output() updateNoteToRefresh = new EventEmitter<any>();
   @Output() trashNoteToRefresh = new EventEmitter<any>();
   @Output() archiveNoteToRefresh= new EventEmitter<any>();
+  @Output() iconsOutput = new EventEmitter<any>();
 
   public searchWord:any
 

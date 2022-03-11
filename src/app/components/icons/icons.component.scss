@@ -42,3 +42,21 @@
 ::ng-deep.mat-menu-panel {
   max-width: none !important;
 }
+
+
+
+.btn:hover{
+  outline-style: solid;
+  outline-color: black;
+  outline-width: 1px;
+}
+.wrapcolor{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  max-width: 170px;
+}
+.btn{
+  margin-left: 1px;
+  white-space: 5px;
+}

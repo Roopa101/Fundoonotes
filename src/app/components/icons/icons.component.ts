@@ -19,19 +19,7 @@ export class IconsComponent implements OnInit {
   isArchiveNotesComponent=false;
   isTrashNotesComponent=false;
 
-  colors = [{bgColorValue:'#fff'},
-  {bgColorValue:'#f28b82'},
-  {bgColorValue:'#fbbc04'},
-  {bgColorValue:'#fff475'},
-  {bgColorValue:'#ccff90'},
-  {bgColorValue:'#a7ffeb'},
-  {bgColorValue:'#cbf0f8'},
-  {bgColorValue:'#aecbfa'},
-  {bgColorValue:'#d7aefb'},
-  {bgColorValue:'#fdcfe8'},
-  {bgColorValue:'#e6c9a8'},
-  {bgColorValue:'#e8eaed'}
-  ];
+  colors = ['#ccff90', '#a7ffeb', '#cbf0f8', '#aecbfa', '#fff7e6', '#FBBC04', '#f28b82', '#fbbc04', '#fff475', '#fdcfe8', '#e6c9a8', '#0080ff']
 
   constructor(private noteService: NoteService, private router:ActivatedRoute)  { }
 
@@ -74,7 +62,7 @@ if (Component == TrashlistComponent) {
     this.noteService.permanentDeleteNote(reqdata).subscribe((response: any) => {
      console.log("note is deleted permanently")
       console.log(response);
-
+      this.changeColorOfNote.emit(response)
 
     })
   
@@ -88,6 +76,8 @@ if (Component == TrashlistComponent) {
     this.noteService.deleteNote(reqdata).subscribe((response: any) => {
      console.log("note is restored")
       console.log(response);
+      this.changeColorOfNote.emit("Note is Restored");
+
 
     })
   
@@ -102,7 +92,7 @@ if (Component == TrashlistComponent) {
      console.log("note is archieved")
       console.log(response);
       this.archiveNoteToRefresh.emit(Response)
-
+     
 
     })
   
@@ -115,6 +105,8 @@ if (Component == TrashlistComponent) {
     this.noteService.archievenote(reqdata).subscribe((response: any) => {
      console.log("note is unarchieved")
       console.log(response);
+      this.changeColorOfNote.emit("Note is unarchived");
+
 
     })
   

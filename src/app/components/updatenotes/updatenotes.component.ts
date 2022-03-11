@@ -51,7 +51,6 @@ export class UpdatenotesComponent implements OnInit {
         console.log(Response);
       
 
-        localStorage.setItem("token", Response.id)
       }, error => { console.log(error); })
     }
     else {

@@ -1,80 +1,68 @@
-<div class="container"> 
- 
-  <div class="register">
-    <form [formGroup]="registerForm" (ngSubmit)="signup()"></form>
-      <div class="image">
-          <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg"  >
+
+<div fxflex="100" fxLayout="row" fxLayoutAlign="center center" fxFlexFill >
+  <mat-card>
+    <div fxLayout="row" fxLayoutAlign="center center" >
+     <div> 
+      <div>
+        <h1 class="header" >
+          <span style='color: blue;'>F</span>
+          <span style='color:red;'>u</span>
+          <span style='color:yellow'>n</span>
+          <span style='color:blue;'>d</span>
+          <span style='color:green;'>o</span>
+          <span style='color:red;'>o</span>
+        </h1>
+        <p class="SubHeader">Create your Account</p>
+      </div>
+      <form [formGroup]="registerForm" (ngSubmit)="signup()">
+      <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field class="full-width-name" appearance="outline">
+          <mat-label>First name</mat-label>
+          <input matInput formControlName="firstName" placeholder="">
+          <mat-error>Invalid Name</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-name" appearance="outline">
+          <mat-label>Last name</mat-label>         
+          <input matInput formControlName="lastName" placeholder="">
+          <mat-error>Invalid Name</mat-error>
+        </mat-form-field>
+      </div>
+        
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-form-field class="full-width-email" appearance="outline">
+          <mat-label>Enter Email</mat-label>
+          <input matInput formControlName="email" placeholder="Email">
+          <mat-hint align="start">You can use letters, numbers & periods </mat-hint>
+          <mat-error>Invalid Email</mat-error>
+        </mat-form-field>     
+      </div>
           
+      <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field class="full-width-password" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="Password" placeholder="" type="password" > 
+          <mat-hint class="hint" align="start">Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint> 
+          <mat-error>Invalid Password</mat-error>          
+        </mat-form-field>
+        <mat-form-field class="full-width-password" appearance="outline">
+          <mat-label>Confirm</mat-label>
+          <input matInput formControlName="confirmPassword" placeholder=" " type="password">    
+          <mat-error>Invalid Password</mat-error>      
+        </mat-form-field>
+      </div>
+          <div>
+            <mat-checkbox class="checkbox1">Show Password</mat-checkbox>
+          </div>
+          <div class="buttons1">
+            <a class="link" routerLink='/login' mat-button href="">Sign in instead</a>
+           <button class="next"  mat-raised-button color="Primary">Next</button>
+          </div> 
+        </form>
+      </div>
+        <div class="image" fxHide.xs="true">
+          <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg"  >
           <p>One account. All of Fundoo Notes working for you.</p>
       </div>
-    <div>
-      <h1 class="header" >
-        <span style='color:blue;'>F</span>
-        <span style='color:red;'>u</span>
-        <span style='color:green'>n</span>
-        <span style='color:blue;'>d</span>
-        <span style='color:yellow;'>o</span>
-        <span style='color:red;'>o</span>
-      </h1>
-      <p class="SubHeader">Create your Account</p>
-    </div>
-    <form [formGroup]="registerForm" (ngSubmit)="signup()">
-    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
-     
-     
-      <mat-form-field class="full-width-name" appearance="outline" >
-        <mat-label>First name</mat-label>
-        <input matInput formControlName='firstName' placeholder="firstname">
-            <mat-error>First name is necessory</mat-error>
-          </mat-form-field>
-      <mat-form-field class="full-width-name" appearance="outline">
-        <mat-label>Last name</mat-label>
-        <input matInput formControlName='lastName' placeholder="lastName">
-            <mat-error>Last name is necessory</mat-error>
-          </mat-form-field>
-    </div>
-      
-    <div fxLayout="row" fxLayoutAlign="center center">
-      <mat-form-field class="full-width-email" appearance="outline">
-        <mat-label>Enter Email</mat-label>
-        <input matInput formControlName='email' placeholder="Email">
-            <mat-error>Enter Email</mat-error>
-          </mat-form-field>    
-    </div>
-        
-    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
-      <mat-form-field class="full-width-password" appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="Password">
-        <mat-error>Enter a password</mat-error>
-
-        <!-- <mat-hint align="start">Use 8 or more character with a mix of letters,numbers & symbols</mat-hint>            -->
-      </mat-form-field>
-      <mat-form-field class="full-width-password" appearance="outline">
-        <mat-label>Confirm</mat-label>
-        <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="confirmPassword">
-        <mat-error>confirm password is necessory</mat-error>
-
-          </mat-form-field>
-
-    </div>
-    <div class="hint">
-      <mat-hint align="start">Use 8 or more character with a mix of letters,numbers & symbols</mat-hint>           
-
-    </div>
-
-        <div class =show>
-          <mat-checkbox matSuffix (click)="checkboxPassword()">Show Password</mat-checkbox>
-        </div>
-        <div>
-          <!-- <a class="sign" routerLink="/login" >Sign in instead</a> -->
-          <button class="sign" routerLink='/login' mat-button color="primary">Sign in instead</button>
-
-         <button class="next" mat-raised-button color="Primary">Next</button>
-        
-        </div> 
-    </form>
-  </div> 
- 
-        
+      </div>
+      </mat-card>           
 </div>

@@ -1,9 +1,10 @@
 <div class="container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="toolbar">
  <button mat-icon-button class="menu" (click)="isExpanded=!isExpanded"><img src="../../../assets/menu.png"  width="30px" height="30px"></button>
- <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px">
+ <div fxLayout="row"  fxLayoutGap="10px" fxLayoutAlign="column" fxHide.xs="true" fxFlex.sm="true" fxHide.md="true" >
    <img class="keep" src="../../../assets/keeps.png" alt="">
-   
+  </div>
+ 
    <!-- <p class="heading">Fundoo</p> -->
    <div>
      <h1 class="header" >
@@ -15,14 +16,13 @@
      <span style='color:red;'>o</span>
      </h1>        
  </div>
- </div>
  
 
- <div class="searchBar" fxHide.lt-md fxFlex=40 fxLayout="row" fxLayoutAlign="start center">
+ <div class="searchBar"  fxFlex=40 fxLayout="row" fxLayoutAlign="start center"  >
   <button mat-icon-button>
       <mat-icon>search</mat-icon>
   </button>
-  <div>
+  <div >
       <input class="input" type="text" placeholder="Search" style="background-color: transparent" (keyup)="search($event)">
   </div>
 </div>

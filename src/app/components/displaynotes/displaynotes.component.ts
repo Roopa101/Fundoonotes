@@ -17,7 +17,7 @@ export class DisplaynotesComponent implements OnInit {
   @Output() updateNoteToRefresh = new EventEmitter<any>();
   @Output() trashNoteToRefresh = new EventEmitter<any>();
   @Output() archiveNoteToRefresh= new EventEmitter<any>();
-  @Output() iconsOutput = new EventEmitter<any>();
+  
 
   public searchWord:any
 
@@ -65,5 +65,6 @@ export class DisplaynotesComponent implements OnInit {
     console.log(data);  
     this.archiveNoteToRefresh.emit("hello")
   }
+  
 
 }
